@@ -8,7 +8,7 @@ namespace Generic058
 {
     class CompareMethod
     {
-        public static int MaxNumber(int first,int second,int third)
+        public static double MaxNumber(double first, double second, double third)
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {

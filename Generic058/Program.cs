@@ -10,7 +10,7 @@ namespace Generic058
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" The maximum  number is :{0} " ,CompareMethod.MaxNumber(13, 34, 51));
+            Console.WriteLine(" The maximum  number is :{0} " ,CompareMethod.MaxNumber(13.34, 34.04, 51.45));
             Console.ReadLine();        
         }
     }
