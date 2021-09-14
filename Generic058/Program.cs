@@ -10,8 +10,10 @@ namespace Generic058
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" The maximum  number is :{0} " ,CompareMethod.MaxNumber(13, 34, 51));
-            Console.ReadLine();        
+            int[] arr = { 1, 12, 14, 17, 86, 92, 76 };
+            GenericcomparetoMethod<int> generic = new GenericcomparetoMethod<int>(arr);
+            generic.PrintMaxValue();
+            Console.ReadLine();
         }
     }
 }

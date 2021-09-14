@@ -6,27 +6,32 @@ using System.Threading.Tasks;
 
 namespace Generic058
 {
-    class CompareMethod
+    class GenericcomparetoMethod<T> where T : IComparable
     {
-        public static int MaxNumber(int first,int second,int third)
+        public T[] value;
+        public GenericcomparetoMethod(T[] value)
         {
-            if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
-            {
-                return first;
-            }
-            else if (second.CompareTo(first) > 0 && second.CompareTo(third) > 0)
-            {
-                return second;
-            }
-            else if (third.CompareTo(second) > 0 && third.CompareTo(first) > 0)
-            {
-                return third;
-            }
-            else
-            {
-                Console.WriteLine("Tow or more numbers are Same");
-                return 0;            }
-
+            this.value = value;
+        }
+        public T[] sort(T[] values)
+        {
+            Array.Sort(values);
+            return values;
+        }
+        public T MaxValue(params T[] values)
+        {
+            T[] sortedArray = sort(this.value);
+            return sortedArray[sortedArray.Length - 1];
+        }
+        public T MaxMethod()
+        {
+            var max = MaxValue(this.value);
+            return max;
+        }
+        public  void PrintMaxValue()
+        {
+            var max = MaxValue(this.value);
+            Console.WriteLine("The maximum value is : "+max);
         }
     }
 }
