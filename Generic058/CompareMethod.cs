@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Generic058
 {
-    class CompareMethod
+    class GenericCompareMethod <T> where T : IComparable
     {
-        public static int MaxNumber(int first,int second,int third)
+        public static T MaxNumber(T first, T second, T third)
         {
             if (first.CompareTo(second) > 0 && first.CompareTo(third) > 0)
             {
@@ -25,7 +25,7 @@ namespace Generic058
             else
             {
                 Console.WriteLine("Tow or more numbers are Same");
-                return 0;            }
+                return default;            }
 
         }
     }
