@@ -10,8 +10,8 @@ namespace Generic058
     {
         static void Main(string[] args)
         {
-            Console.WriteLine(" The maximum  number is :{0} " ,CompareMethod.MaxNumber(13, 34, 51));
-            Console.ReadLine();        
+            Console.WriteLine("The maximum number is:{0}", GenericcomparetoMethod<string>.MaxNum("varun", "hemant", "lad"));
+            Console.ReadLine();
         }
     }
 }
